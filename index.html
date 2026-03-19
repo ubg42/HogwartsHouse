@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hogwarts House Quiz</title>
-
+<link rel="shortcut icon" href="favicon.png">
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -84,20 +84,20 @@ function showResult(house) {
   const imageDiv = document.getElementById("image");
 
   if (house === "Hufflepuff") {
-    resultText.innerText = "🟡 You belong in Hufflepuff!";
-    imageDiv.innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQGwm0L0xJZO9Ov2Xymjucsj9sr4QDaNtPzA&s">';
+    resultText.innerText = "You belong in Hufflepuff!";
+    imageDiv.innerHTML = '<img src="huflepuff.png">';
   
   } else if (house === "Slytherin") {
-    resultText.innerText = "🐍 You belong in Slytherin!";
-    imageDiv.innerHTML = '<img src="https://www.clipartmax.com/png/middle/230-2302214_slytherin-harry-potter-wiki-fandom-powered-by-wikia-slytherin-crest-transparent.png">';
+    resultText.innerText = "You belong in Slytherin!";
+    imageDiv.innerHTML = '<img src="slytherin.png">';
   
   } else if (house === "Gryffindor") {
-    resultText.innerText = "🦁 You belong in Gryffindor!";
-    imageDiv.innerHTML = '<img src="https://static.wikia.nocookie.net/hogwarts-life/images/2/28/Gryffindor_ClearBG2.png/revision/latest?cb=20170121132356">';
+    resultText.innerText = "You belong in Gryffindor!";
+    imageDiv.innerHTML = '<img src="gryffindor.png">';
   
   } else if (house === "Ravenclaw") {
-    resultText.innerText = "🔵 You belong in Ravenclaw!";
-    imageDiv.innerHTML = '<img src="https://static.wikia.nocookie.net/pottermore/images/4/40/Ravenclaw_Crest_1.png/revision/latest?cb=20140604194505">';
+    resultText.innerText = "You belong in Ravenclaw!";
+    imageDiv.innerHTML = '<img src="ravenclaw.png">';
   }
 }
 </script>
