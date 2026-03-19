@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hogwarts House Quiz</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1a1a1a, #333);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.quiz-box {
+  max-width: 500px;
+  margin: auto;
+  background: #222;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #666;
+}
+
+.result {
+  font-size: 26px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-box">
+  <h1>🧙 Hogwarts House Quiz</h1>
+
+  <p id="question">
+    Imagine that you approach a locked door.<br>
+    You have to get inside the room.<br><br>
+    <strong>What's your next move?</strong>
+  </p>
+
+  <div id="answers">
+    <button onclick="showResult('Gryffindor')">💥 Kick the door down</button>
+    <button onclick="showResult('Ravenclaw')">🧠 Try to solve how to unlock it</button>
+    <button onclick="showResult('Hufflepuff')">🤝 Knock and ask politely</button>
+    <button onclick="showResult('Slytherin')">🕵️ Look for another sneaky way in</button>
+  </div>
+
+  <div id="result" class="result"></div>
+  <div id="image"></div>
+</div>
+
+<script>
+function showResult(house) {
+  document.getElementById("answers").style.display = "none";
+  document.getElementById("question").style.display = "none";
+
+  const resultText = document.getElementById("result");
+  const imageDiv = document.getElementById("image");
+
+  if (house === "Hufflepuff") {
+    resultText.innerText = "🟡 You belong in Hufflepuff!";
+    imageDiv.innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQGwm0L0xJZO9Ov2Xymjucsj9sr4QDaNtPzA&s">';
+  
+  } else if (house === "Slytherin") {
+    resultText.innerText = "🐍 You belong in Slytherin!";
+    imageDiv.innerHTML = '<img src="https://www.clipartmax.com/png/middle/230-2302214_slytherin-harry-potter-wiki-fandom-powered-by-wikia-slytherin-crest-transparent.png">';
+  
+  } else if (house === "Gryffindor") {
+    resultText.innerText = "🦁 You belong in Gryffindor!";
+    imageDiv.innerHTML = '<img src="https://static.wikia.nocookie.net/hogwarts-life/images/2/28/Gryffindor_ClearBG2.png/revision/latest?cb=20170121132356">';
+  
+  } else if (house === "Ravenclaw") {
+    resultText.innerText = "🔵 You belong in Ravenclaw!";
+    imageDiv.innerHTML = '<img src="https://static.wikia.nocookie.net/pottermore/images/4/40/Ravenclaw_Crest_1.png/revision/latest?cb=20140604194505">';
+  }
+}
+</script>
+
+</body>
+</html>
